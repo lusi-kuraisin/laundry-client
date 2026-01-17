@@ -48,10 +48,8 @@ const fetchTransactions = async (params = {}) => {
       params,
       withCredentials: true,
       headers: {
-
-    "x-client-type": "web",
-
-  },
+        "X-Client-Type": "web",
+      },
     });
 
     return response.data;
@@ -66,10 +64,8 @@ const fetchTransactionDetail = async (id) => {
     const response = await axios.get(`${API_BASE_URL}/${id}`, {
       withCredentials: true,
       headers: {
-
-    "x-client-type": "web",
-
-  },
+        "X-Client-Type": "web",
+      },
     });
     return response.data.data;
   } catch (error) {
@@ -88,11 +84,12 @@ const updateTransactionStatusAPI = async (id, type, value) => {
   }
 
   try {
-    const response = await axios.put(url, payload, { withCredentials: true, headers: {
-
-    "x-client-type": "web",
-
-  }, });
+    const response = await axios.put(url, payload, {
+      withCredentials: true,
+      headers: {
+        "X-Client-Type": "web",
+      },
+    });
     return response.data.data;
   } catch (error) {
     console.error(

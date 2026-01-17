@@ -16,10 +16,8 @@ export function AuthProvider({ children }) {
     try {
       const response = await axios.get(`${BASE_API_URL}/auth/me`, {
         headers: {
-
-    "x-client-type": "web",
-
-  },
+          "X-Client-Type": "web",
+        },
         withCredentials: true,
       });
 
@@ -44,10 +42,8 @@ export function AuthProvider({ children }) {
       await axios.post(`${BASE_API_URL}/auth/logout`, null, {
         withCredentials: true,
         headers: {
-
-    "x-client-type": "web",
-
-  },
+          "X-Client-Type": "web",
+        },
       });
     } catch (error) {
       console.error("Logout error:", error);

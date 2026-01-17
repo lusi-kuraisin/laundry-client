@@ -68,10 +68,8 @@ export function Transactions() {
       const response = await axios.get(`${API_BASE_URL}/create-data`, {
         withCredentials: true,
         headers: {
-
-    "x-client-type": "web",
-
-  },
+          "X-Client-Type": "web",
+        },
       });
 
       const { customers, packages, currentUserId } = response.data.data;
@@ -223,10 +221,8 @@ export function Transactions() {
       const response = await axios.post(API_BASE_URL, payload, {
         withCredentials: true,
         headers: {
-
-    "x-client-type": "web",
-
-  },
+          "X-Client-Type": "web",
+        },
       });
 
       const invoiceCode = response.data.invoiceCode;
