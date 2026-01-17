@@ -18,7 +18,7 @@ import {
   PencilSquareIcon,
 } from "@heroicons/react/24/solid";
 
-const API_BASE_URL = "https://laundromat-server.vercel.app/customer";
+const API_BASE_URL = "https://laundromat-server.vercel.app/api/v1/customer";
 
 const initialFormState = { name: "", phone: "", address: "" };
 

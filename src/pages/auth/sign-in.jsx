@@ -11,7 +11,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { useAuth } from "@/context";
 
-const BASE_API_URL = "https://laundromat-server.vercel.app";
+const BASE_API_URL = "https://laundromat-server.vercel.app/api/v1";
 
 const CustomPasswordInput = ({ value, onChange, name }) => {
   const [showPassword, setShowPassword] = useState(false);

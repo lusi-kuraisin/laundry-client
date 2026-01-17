@@ -23,7 +23,7 @@ import {
   TagIcon,
 } from "@heroicons/react/24/solid";
 
-const API_BASE_URL = "https://laundromat-server.vercel.app/transaction";
+const API_BASE_URL = "https://laundromat-server.vercel.app/api/v1/transaction";
 
 const formatRupiah = (amount) => {
   return new Intl.NumberFormat("id-ID", {

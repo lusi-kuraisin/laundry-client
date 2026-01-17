@@ -6,7 +6,7 @@ import { ArrowPathIcon } from "@heroicons/react/24/outline";
 export const AuthContext = createContext(null);
 AuthContext.displayName = "AuthContext";
 
-const BASE_API_URL = "https://laundromat-server.vercel.app";
+const BASE_API_URL = "https://laundromat-server.vercel.app/api/v1";
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
