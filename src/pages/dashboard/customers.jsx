@@ -57,6 +57,11 @@ export function Customers() {
             limit: 15,
           },
           withCredentials: true,
+          headers: {
+
+    "x-client-type": "web",
+
+  },
         });
 
         setCustomers(response.data.data);
@@ -119,7 +124,11 @@ export function Customers() {
 
     setAlert(null);
     try {
-      await axios.delete(`${API_BASE_URL}/${id}`, { withCredentials: true });
+      await axios.delete(`${API_BASE_URL}/${id}`, { withCredentials: true, headers: {
+
+    "x-client-type": "web",
+
+  }, });
       handleCloseModal(true, `Pelanggan ${name} berhasil dihapus! 👍`);
     } catch (error) {
       console.error("❌ Gagal menghapus pelanggan:", error.response || error);

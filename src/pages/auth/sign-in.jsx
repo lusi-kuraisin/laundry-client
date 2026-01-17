@@ -76,7 +76,11 @@ function AuthFormContent({ redirectTo }) {
           email: formData.email,
           password: formData.password,
         },
-        { withCredentials: true }
+        { withCredentials: true, headers: {
+
+    "x-client-type": "web",
+
+  }, }
       );
 
       const user = response.data.user;

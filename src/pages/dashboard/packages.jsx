@@ -61,6 +61,11 @@ export function Packages() {
             limit: 15,
           },
           withCredentials: true,
+          headers: {
+
+    "x-client-type": "web",
+
+  },
         });
 
         setPackages(response.data.data);
@@ -115,7 +120,11 @@ export function Packages() {
 
     setAlert(null);
     try {
-      await axios.delete(`${API_BASE_URL}/${id}`, { withCredentials: true });
+      await axios.delete(`${API_BASE_URL}/${id}`, { withCredentials: true, headers: {
+
+    "x-client-type": "web",
+
+  }, });
       handleCloseModal(true, `Paket "${name}" berhasil dihapus! 👍`);
     } catch (error) {
       console.error("❌ Gagal menghapus paket:", error.response || error);

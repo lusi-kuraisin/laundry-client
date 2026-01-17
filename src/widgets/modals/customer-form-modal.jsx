@@ -71,7 +71,11 @@ export function CustomerFormModal({ open, handleClose, customerData }) {
         response = await axios.put(
           `${API_BASE_URL}/${customerData.id}`,
           formData,
-          { withCredentials: true }
+          { withCredentials: true, headers: {
+
+    "x-client-type": "web",
+
+  }, }
         );
         message =
           response.data.message ||
@@ -79,6 +83,11 @@ export function CustomerFormModal({ open, handleClose, customerData }) {
       } else {
         response = await axios.post(API_BASE_URL, formData, {
           withCredentials: true,
+          headers: {
+
+    "x-client-type": "web",
+
+  },
         });
         message =
           response.data.message ||

@@ -47,6 +47,11 @@ const fetchTransactions = async (params = {}) => {
     const response = await axios.get(API_BASE_URL, {
       params,
       withCredentials: true,
+      headers: {
+
+    "x-client-type": "web",
+
+  },
     });
 
     return response.data;
@@ -60,6 +65,11 @@ const fetchTransactionDetail = async (id) => {
   try {
     const response = await axios.get(`${API_BASE_URL}/${id}`, {
       withCredentials: true,
+      headers: {
+
+    "x-client-type": "web",
+
+  },
     });
     return response.data.data;
   } catch (error) {
@@ -78,7 +88,11 @@ const updateTransactionStatusAPI = async (id, type, value) => {
   }
 
   try {
-    const response = await axios.put(url, payload, { withCredentials: true });
+    const response = await axios.put(url, payload, { withCredentials: true, headers: {
+
+    "x-client-type": "web",
+
+  }, });
     return response.data.data;
   } catch (error) {
     console.error(

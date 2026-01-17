@@ -113,7 +113,11 @@ export function PackageFormModal({ open, handleClose, packageData }) {
         response = await axios.put(
           `${API_BASE_URL}/${packageData.id}`,
           payload,
-          { withCredentials: true }
+          { withCredentials: true, headers: {
+
+    "x-client-type": "web",
+
+  }, }
         );
         message =
           response.data.message ||
@@ -121,6 +125,11 @@ export function PackageFormModal({ open, handleClose, packageData }) {
       } else {
         response = await axios.post(API_BASE_URL, payload, {
           withCredentials: true,
+          headers: {
+
+    "x-client-type": "web",
+
+  },
         });
         message =
           response.data.message ||

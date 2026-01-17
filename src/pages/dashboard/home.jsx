@@ -114,6 +114,11 @@ export function Home() {
     try {
       const statsResponse = await axios.get(`${API_BASE_URL}/dashboard/stats`, {
         withCredentials: true,
+        headers: {
+
+    "x-client-type": "web",
+
+  },
       });
       const recentOrdersResponse = await axios.get(
         `${API_BASE_URL}/transaction`,
@@ -123,6 +128,11 @@ export function Home() {
             status_in: ["new", "processing"],
           },
           withCredentials: true,
+          headers: {
+
+    "x-client-type": "web",
+
+  },
         }
       );
       const recentActivityResponse = await axios.get(
@@ -130,6 +140,11 @@ export function Home() {
         {
           params: { limit: 4 },
           withCredentials: true,
+          headers: {
+
+    "x-client-type": "web",
+
+  },
         }
       );
 
@@ -237,7 +252,11 @@ export function Home() {
     try {
       const chartsResponse = await axios.get(
         `${API_BASE_URL}/dashboard/charts`,
-        { withCredentials: true }
+        { withCredentials: true, headers: {
+
+    "x-client-type": "web",
+
+  }, }
       );
       const backendCharts = chartsResponse.data.data;
 
