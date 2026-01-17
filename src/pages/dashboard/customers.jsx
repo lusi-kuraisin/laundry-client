@@ -25,7 +25,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { CustomerFormModal } from "@/widgets/modals/customer-form-modal";
 
-const API_BASE_URL = "http://localhost:4000/api/v1/customer";
+const API_BASE_URL = "https://laundromat-server.vercel.app/customer";
 
 const formatDate = (dateString) =>
   new Date(dateString).toLocaleDateString("id-ID", {

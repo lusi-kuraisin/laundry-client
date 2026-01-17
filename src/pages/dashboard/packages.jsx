@@ -28,7 +28,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { PackageFormModal } from "@/widgets/modals/package-form-modal";
 
-const API_BASE_URL = "http://localhost:4000/api/v1/package";
+const API_BASE_URL = "https://laundromat-server.vercel.app/package";
 
 const formatRupiah = (amount) =>
   new Intl.NumberFormat("id-ID", {

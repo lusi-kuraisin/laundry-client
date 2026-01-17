@@ -22,7 +22,7 @@ import {
   TruckIcon,
 } from "@heroicons/react/24/solid";
 
-const API_BASE_URL = "http://localhost:4000/api/v1/package";
+const API_BASE_URL = "https://laundromat-server.vercel.app/package";
 const initialFormState = {
   name: "",
   description: "",

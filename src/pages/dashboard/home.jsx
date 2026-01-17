@@ -30,7 +30,7 @@ import {
   getChartConfig,
 } from "@/data/statistic-charts-config";
 
-const API_BASE_URL = "http://localhost:4000/api/v1";
+const API_BASE_URL = "https://laundromat-server.vercel.app";
 
 const initialDashboardData = {
   stats: [
