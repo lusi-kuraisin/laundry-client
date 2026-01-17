@@ -177,7 +177,7 @@ export function SignIn() {
         <div
           className="mx-5 mt-5 h-[30vh] overflow-hidden rounded-2xl bg-cover bg-center md:h-[40vh]"
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/nature.jpg")`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/laundry.jpg")`,
           }}
         >
           <header className="relative z-10 p-6 text-2xl font-bold text-white">
